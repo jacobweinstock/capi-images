@@ -42,7 +42,7 @@ jobs:
       - name: Build the images
         run: |
           set -x
-          export PATH=$PWD/.bin:$PATH
+          export PATH=$PWD/.bin:$PWD/images/capi/.local/bin/:$PATH
           pwd
           cd image-builder/images/capi
           cat << EOF > packer/raw/overwrite-kubernetes.json
