@@ -41,6 +41,7 @@ jobs:
 
       - name: Build the images
         run: |
+          set -x
           export PATH=$PWD/.bin:$PATH
           pwd
           cd image-builder/images/capi
