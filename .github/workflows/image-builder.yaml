@@ -38,6 +38,7 @@ jobs:
         run: |
           sudo apt update
           sudo -i apt install -y qemu-kvm libvirt-daemon-system libvirt-clients virtinst cpu-checker libguestfs-tools libosinfo-bin qemu-system-x86
+          sudo -i apt install -y packer=1.9.5-1 # https://github.com/hashicorp/packer/issues/12830
 
       - name: Build the images
         run: |
