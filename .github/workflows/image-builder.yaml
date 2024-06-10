@@ -56,6 +56,10 @@ jobs:
           EOF
           make deps-raw
           packer plugins install github.com/hashicorp/qemu
+          packer version
+          which packer
+          ls -ltrah .local/bin/
+          echo $PATH
           PACKER_VAR_FILES=packer/raw/overwrite-kubernetes.json make build-raw-ubuntu-2004
 
       - name: Log in to the Container registry
